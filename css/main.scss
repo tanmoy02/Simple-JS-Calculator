@@ -1,0 +1,119 @@
+$colors: (
+    primary: #00bf72,
+    gradient: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12),
+);
+
+@function color ($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat',
+    sans-serif;
+    background: color(gradient);
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+    h2 {
+        margin: 0 0 40px;
+        color: color(primary);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    input {
+        padding: 10px 0;
+        margin-bottom: 30px;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #999;
+
+        &[type="submit"],
+        &[type="reset"] {
+            border-bottom: none;
+            cursor: pointer;
+            background: color(primary);
+            color: #fff;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            &:hover {
+                background: #fff;
+                border: 1px solid color(primary);
+                color: color(primary);
+                transition: 500ms;
+            }
+
+            &[type="submit"] {
+                width: calc(70% - 5px);
+            }
+
+            &[type="reset"] {
+                width: 30%;
+            }
+        }
+
+        &:focus ~ label,
+        &:valid ~ label {
+            top: -75px;
+            left: 0;
+            color: color(primary);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        &:focus {
+            border-bottom: 2px solid color(primary);
+        }
+    }
+
+    form {
+        div {
+            label {
+                position: relative;
+                top: -60px;
+                left: 0;
+                color: #999;
+                transition: 500ms;
+                pointer-events: none;
+            }
+        }
+    }
+
+    h3 {
+        color: color(primary);
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    color: #fff;
+
+    &:hover i {
+        color: color(primary);
+    }
+}

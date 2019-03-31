@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: -webkit-gradient(linear, left bottom, right top, from(#051937), color-stop(#004d7a), color-stop(#008793), color-stop(#00bf72), to(#a8eb12));
+  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  height: 100vh;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 400px;
+  background: #fff;
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+  margin: 0 0 40px;
+  color: #00bf72;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container input {
+  padding: 10px 0;
+  margin-bottom: 30px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #999;
+}
+
+.container input[type="submit"], .container input[type="reset"] {
+  border-bottom: none;
+  cursor: pointer;
+  background: #00bf72;
+  color: #fff;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.container input[type="submit"]:hover, .container input[type="reset"]:hover {
+  background: #fff;
+  border: 1px solid #00bf72;
+  color: #00bf72;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.container input[type="submit"][type="submit"], .container input[type="reset"][type="submit"] {
+  width: calc(70% - 5px);
+}
+
+.container input[type="submit"][type="reset"], .container input[type="reset"][type="reset"] {
+  width: 30%;
+}
+
+.container input:focus ~ label,
+.container input:valid ~ label {
+  top: -75px;
+  left: 0;
+  color: #00bf72;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container input:focus {
+  border-bottom: 2px solid #00bf72;
+}
+
+.container form div label {
+  position: relative;
+  top: -60px;
+  left: 0;
+  color: #999;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  pointer-events: none;
+}
+
+.container h3 {
+  color: #00bf72;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  color: #fff;
+}
+
+footer:hover i {
+  color: #00bf72;
+}
+/*# sourceMappingURL=main.css.map */
