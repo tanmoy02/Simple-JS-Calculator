@@ -40,7 +40,7 @@ $("#calculate").click(function () {
         return $("h3").text(value1 + " + " + value3 + " = " + sum(value1, value3));
         // alert(value1 + " + " + value3 + " = " + sum(value1, value3));
     } else if(value2 == "-") {
-        return $("h3").text(value1 + " - " + value3 + " = " + substract(value1, value3));
+        return $("h3").text(value1 + " - " + value3 + " = " + subtract(value1, value3));
         // alert(value1 + " - " + value3 + " = " + subtract(value1, value3));
     } else if(value2 == "*") {
         return $("h3").text(value1 + " x " + value3 + " = " + multiply(value1, value3));
